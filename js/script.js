@@ -30,27 +30,12 @@ nextBtn.addEventListener('click', nextSlide)
 prevBtn.addEventListener('click', prevSlide)
 
 function nextSlide() {
-    ContainerImg1.animate([{
-        opacity: '0.1'
-    }, {
-        opacity: '1.0'
-    }], {
-        duration: 1000,
-        fill: 'forwards'
-    })
-    nextBtn.animate([{
-        transform: 'rotate(180deg)'
-    }, {
-        transform: 'rotate(0deg)'
-    }, {
-        transform: 'scale(1)'
-    }, {
-        transform: 'scale(1.5)'
-    }], {
-        duration: 1000,
-        fill: 'forwards'
-    })
-
+    ContainerImg1.animate([{ opacity: '0.1'  }, { opacity: '1.0' }], {  duration: 1000,fill: 'forwards'})
+       
+  nextBtn.animate([{ transform:'rotate(180deg)'}, { transform: 'rotate(0deg)'}, {transform: 'scale(1)'}, { transform: 'scale(1.5)'
+       
+     }], { duration: 1000,  fill: 'forwards'   })
+      
     if (counter === 4) {
         counter = -1
     }
@@ -89,14 +74,7 @@ function prevSlide() {
 }
 //------------------
 
-let divMous = document.querySelector('.img1>div')
 
-ContainerImg1.addEventListener('mouseover', () => {
-    divMous.classList.toggle('btnOnMous')
-
-
-
-})
 
 //slide2
 let nextBtn2 = document.querySelector('.btnN2')
@@ -233,3 +211,43 @@ function prevSlide3() {
     ContainerImg3.style.backgroundImage = `url(img/farben-${counter3}.jpg)`
 
 }
+
+
+/* 
+let imgsSlider = document.querySelectorAll('.slide')
+
+
+window.addEventListener('scroll' , slideReveal)
+
+function slideReveal(e) {
+ //   e.preventDefault()
+    console.log(imgsSlider)
+    imgsSlider.forEach(item =>{
+        let slidInAt = (window.scrollY + window.innerHeight) -(item.height / 2) ;//height von screen + height von Scroll
+      // console.log(slidInAt);
+        let imgBotton = (item.offsetTop + item.height) //botton Fotos
+
+        let isHalf = slidInAt > item.offsetTop 
+
+        let imgNotPassed = window.scrollY < imgBotton  // img is inside screen
+
+        console.log(isHalf ,imgNotPassed );
+
+        if (isHalf && imgNotPassed) {     // img is inside screen
+           item.classList.add('reveal')
+        }else{
+           item.classList.remove('reveal')
+        }
+    })
+}
+ */
+
+ //==================
+ let a = document.querySelector('#cardContainer1 div a')
+
+a.addEventListener('mouseover' , ()=>{
+    a.classList.add('hover')
+}) 
+a.addEventListener('mouseout' , ()=>{
+    a.classList.remove('hover')
+}) 
