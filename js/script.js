@@ -258,42 +258,181 @@ aBtn2.forEach(btn => {
 
 
 //=================ToDoList 
-let cardToDoListItem = document.querySelector('#items')
-let addBtns = document.querySelectorAll('#cardContainer1 div a')
-let prudoctsName = document.querySelector('#cardContainer1 div p')
 
-let ul = document.createElement('ul') //creat ul inside  .items
-cardToDoListItem.append(ul)
-console.log(cardToDoListItem);
-
-
-addBtns.forEach(addBtn => {
-    addBtn.onclick = (e) => {
-        e.preventDefault()
-
-
-        let itemLi = document.createElement('li')
-        itemLi.innerText = prudoctsName.innerText
-        ul.append(itemLi)
-
-
-    }
-});
+let pName = document.querySelector('#cardContainer1 .p1')
+let creatLiPrice = document.querySelector('#cardContainer1 .span1')
+let items = document.querySelector('#items')
+let ul = document.createElement('ul')
+items.append(ul)
+let btn1 =document.querySelector('#cardContainer1 .addBtn1')
+console.log(btn1);
 
 
 
+btn1.addEventListener('click', (e)=> {
+    e.preventDefault()
 
-let add2Btns = document.querySelectorAll('#cardContainer2 div a')
-add2Btns.forEach(addBtn => {
-    addBtn.onclick = (e) => {
-        e.preventDefault()
-        console.log('add')
-    }
-});
+    let creatLi = document.createElement('li')
+    creatLi.innerText = pName.innerText
+    ul.append(creatLi)
 
 
+    let creatLi2 = document.createElement('li')
+    creatLi2.innerText = creatLiPrice.innerText
+    ul.append(creatLi2)
 
-function addToList() {
+
+    let creatLi3 = document.createElement('li')
+    creatLi3.innerText = '3'
+    ul.append(creatLi3)
 
 
-}
+    let creatLi4 = document.createElement('button')
+    creatLi4.innerText = 'Remove'
+    ul.append(creatLi4)
+
+
+})
+
+
+
+
+let pName2 = document.querySelector('#cardContainer1 .p2')
+let creatLiPrice2 = document.querySelector('#cardContainer1 .span2')
+let ul2 = document.createElement('ul')
+items.append(ul2)
+let btn2 =document.querySelector('#cardContainer1 .addBtn2')
+console.log(btn2);
+
+
+btn2.addEventListener('click', (e)=> {
+    e.preventDefault()
+
+    let creatLi = document.createElement('li')
+    creatLi.innerText = pName2.innerText
+    ul2.append(creatLi)
+
+
+    let creatLi2 = document.createElement('li')
+    creatLi2.innerText = creatLiPrice2.innerText
+    ul2.append(creatLi2)
+
+
+    let creatLi3 = document.createElement('li')
+    creatLi3.innerText = '3'
+    ul2.append(creatLi3)
+
+
+    let creatLi4 = document.createElement('button')
+    creatLi4.innerText = 'Remove'
+    ul2.append(creatLi4)
+
+
+})
+
+
+
+
+
+
+let pName3 = document.querySelector('#cardContainer1 .p3')
+let creatLiPrice3 = document.querySelector('#cardContainer1 .span3')
+let ul3 = document.createElement('ul')
+items.append(ul3)
+let btn3 =document.querySelector('#cardContainer1 .addBtn3')
+console.log(btn3);
+
+
+btn3.addEventListener('click', (e)=> {
+    e.preventDefault()
+
+    let creatLi = document.createElement('li')
+    creatLi.innerText = pName3.innerText
+    ul3.append(creatLi)
+
+
+    let creatLi2 = document.createElement('li')
+    creatLi2.innerText = creatLiPrice3.innerText
+    ul3.append(creatLi2)
+
+
+    let creatLi3 = document.createElement('li')
+    creatLi3.innerText = '3'
+    ul3.append(creatLi3)
+
+
+    let creatLi4 = document.createElement('button')
+    creatLi4.innerText = 'Remove'
+    ul3.append(creatLi4)
+
+
+})
+
+
+
+let pName4 = document.querySelector('#cardContainer2 .p4')
+let creatLiPrice4 = document.querySelector('#cardContainer2 .span4')
+let ul4 = document.createElement('ul')
+items.append(ul4)
+let btn4 =document.querySelector('#cardContainer2 .addBtn4')
+console.log(btn4);
+
+
+btn4.addEventListener('click', (e)=> {
+    e.preventDefault()
+
+    let creatLi = document.createElement('li')
+    creatLi.innerText = pName4.innerText
+    ul4.append(creatLi)
+
+
+    let creatLi2 = document.createElement('li')
+    creatLi2.innerText = creatLiPrice4.innerText
+    ul4.append(creatLi2)
+
+
+    let creatLi3 = document.createElement('li')
+    creatLi3.innerText = '3'
+    ul4.append(creatLi3)
+
+
+    let creatLi4 = document.createElement('button')
+    creatLi4.innerText = 'Remove'
+    ul4.append(creatLi4)
+
+
+})
+
+
+let pName5 = document.querySelector('#cardContainer2 .p5')
+let creatLiPrice5 = document.querySelector('#cardContainer2 .span5')
+let ul5 = document.createElement('ul')
+items.append(ul5)
+let btn5 =document.querySelector('#cardContainer2 .addBtn5')
+console.log(btn5);
+
+
+btn5.addEventListener('click', (e)=> {
+    e.preventDefault()
+
+    let creatLi = document.createElement('li')
+    creatLi.innerText = pName5.innerText
+    ul5.append(creatLi)
+
+
+    let creatLi2 = document.createElement('li')
+    creatLi2.innerText = creatLiPrice5.innerText
+    ul5.append(creatLi2)
+
+
+    let creatLi3 = document.createElement('li')
+    creatLi3.innerText = '3'
+    ul5.append(creatLi3)
+
+
+    let creatLi4 = document.createElement('button')
+    creatLi4.innerText = 'Remove'
+    ul5.append(creatLi4)
+
+
+})
