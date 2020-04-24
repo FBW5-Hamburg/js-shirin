@@ -30,12 +30,29 @@ nextBtn.addEventListener('click', nextSlide)
 prevBtn.addEventListener('click', prevSlide)
 
 function nextSlide() {
-    ContainerImg1.animate([{ opacity: '0.1'  }, { opacity: '1.0' }], {  duration: 1000,fill: 'forwards'})
-       
-  nextBtn.animate([{ transform:'rotate(180deg)'}, { transform: 'rotate(0deg)'}, {transform: 'scale(1)'}, { transform: 'scale(1.5)'
-       
-     }], { duration: 1000,  fill: 'forwards'   })
-      
+    ContainerImg1.animate([{
+        opacity: '0.1'
+    }, {
+        opacity: '1.0'
+    }], {
+        duration: 1000,
+        fill: 'forwards'
+    })
+
+    nextBtn.animate([{
+        transform: 'rotate(180deg)'
+    }, {
+        transform: 'rotate(0deg)'
+    }, {
+        transform: 'scale(1)'
+    }, {
+        transform: 'scale(1.5)'
+
+    }], {
+        duration: 1000,
+        fill: 'forwards'
+    })
+
     if (counter === 4) {
         counter = -1
     }
@@ -213,41 +230,70 @@ function prevSlide3() {
 }
 
 
-/* 
-let imgsSlider = document.querySelectorAll('.slide')
 
+//=======effect an ADDbtn===========
+let aBtns = document.querySelectorAll('#cardContainer1 a')
 
-window.addEventListener('scroll' , slideReveal)
-
-function slideReveal(e) {
- //   e.preventDefault()
-    console.log(imgsSlider)
-    imgsSlider.forEach(item =>{
-        let slidInAt = (window.scrollY + window.innerHeight) -(item.height / 2) ;//height von screen + height von Scroll
-      // console.log(slidInAt);
-        let imgBotton = (item.offsetTop + item.height) //botton Fotos
-
-        let isHalf = slidInAt > item.offsetTop 
-
-        let imgNotPassed = window.scrollY < imgBotton  // img is inside screen
-
-        console.log(isHalf ,imgNotPassed );
-
-        if (isHalf && imgNotPassed) {     // img is inside screen
-           item.classList.add('reveal')
-        }else{
-           item.classList.remove('reveal')
-        }
+aBtns.forEach(btn => {
+    btn.addEventListener('mouseover', () => {
+        btn.classList.add('hover')
     })
+    btn.addEventListener('mouseout', () => {
+        btn.classList.remove('hover')
+    })
+
+});
+
+let aBtn2 = document.querySelectorAll('#cardContainer2 a')
+
+aBtn2.forEach(btn => {
+    btn.addEventListener('mouseover', () => {
+        btn.classList.add('hover')
+    })
+    btn.addEventListener('mouseout', () => {
+        btn.classList.remove('hover')
+    })
+
+});
+
+
+//=================ToDoList 
+let cardToDoListItem = document.querySelector('#items')
+let addBtns = document.querySelectorAll('#cardContainer1 div a')
+let prudoctsName = document.querySelector('#cardContainer1 div p')
+
+let ul = document.createElement('ul') //creat ul inside  .items
+cardToDoListItem.append(ul)
+console.log(cardToDoListItem);
+
+
+addBtns.forEach(addBtn => {
+    addBtn.onclick = (e) => {
+        e.preventDefault()
+
+
+        let itemLi = document.createElement('li')
+        itemLi.innerText = prudoctsName.innerText
+        ul.append(itemLi)
+
+
+    }
+});
+
+
+
+
+let add2Btns = document.querySelectorAll('#cardContainer2 div a')
+add2Btns.forEach(addBtn => {
+    addBtn.onclick = (e) => {
+        e.preventDefault()
+        console.log('add')
+    }
+});
+
+
+
+function addToList() {
+
+
 }
- */
-
- //==================
- let a = document.querySelector('#cardContainer1 div a')
-
-a.addEventListener('mouseover' , ()=>{
-    a.classList.add('hover')
-}) 
-a.addEventListener('mouseout' , ()=>{
-    a.classList.remove('hover')
-}) 
