@@ -194,210 +194,179 @@ nav a:hover:after {
     left: 275px;
 }
 
-
-
-/* ================card  ============*/
-
-#cardContainer1 {
-
+/* ========new card ==================================================================*/
+#store {
+    background-color: burlywood;
     width: 100%;
+    height: 2000px;
+}
+
+.container {
+    width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+
+}
+
+.container .row {
+    width: 1200px;
+
+}
+
+#store-items {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    justify-content: center;
+    height: 2000px;
+    flex-wrap: wrap;
+}
+
+#store-items .store-item-div {
+    width: 500px;
+    height: 500px;
+    background-color: cornsilk;
+    margin-left: 30px;
+    margin-bottom: 50px;
+}
+
+.store-img {
+    width: 500px;
     height: 400px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-}
-
-#cardContainer1 div {
-    width: 300px;
-    height: 361px;
-    margin-left: 20px;
-    /* box-shadow: 0 30px 30px -20px #999900 ;  */
-    position: relative;
-
-
-}
-
-
-#cardContainer1 .mobel1 {
-    position: absolute;
-    background: url(../img/mobel-1.jpg) center/cover;
-    background-repeat: no-repeat;
-    /* background-size: 200px; */
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -10px #1a1a05bd ; 
-}
-
-#cardContainer1 span{
-    position: absolute;
-    bottom: 40px;
-    right: 165px;
-    font-size: 22px;
-}
-#cardContainer1 p{
-    font-size: 20px;
-}
-#cardContainer2 p{
-    font-size: 20px;
-}
-#cardContainer1 .mobel2 {
-    background: url(../img/mobel-2.jpg) center/cover no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -10px #1a1a05bd
-
-}
-
-#cardContainer1 .mobel3 {
-    background: url(../img/mobel-3.jpg) center/cover no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -10px #1a1a05bd
-
-}
-
-
-
-#cardContainer2 {
-    width: 100%;
-    height: 760px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: auto;
-
-}
-
-#cardContainer2 div {
-    width: 300px;
-    height: 361px;
-    margin-left: 20px;
-    position: relative;
-    /* box-shadow: 0 30px 30px -20px #999900 ; */
-
-}
-
-#cardContainer2 span{
-    position: absolute;
-    bottom: 40px;
-    right: 165px;
-    font-size: 22px;
-}
-
-
-#cardContainer2 .mobel4 {
-    background: url(../img/mobel-4.jpg) center/cover no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -10px #1a1a05bd
-}
-
-#cardContainer2 .mobel5 {
-    background: url(../img/mobel-5.jpg) center/cover no-repeat;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    box-shadow: 0 30px 30px -10px #1a1a05bd
-}
-
-
-#cardContainer1 a {
-    position: absolute;
-    bottom: 0;
-    padding: 4px 15px;
-    letter-spacing: 4px;
-    font-size: 24px;
     overflow: hidden;
-    transition: 0.2s;
-    right: 142px;
-    text-decoration: none;
-    color: #131701;
-    
 }
 
-#cardContainer2 a {
-    position: absolute;  
-    padding: 4px 15px;
-    letter-spacing: 4px;
-    font-size: 24px;
-    overflow: hidden;
-    transition: 0.2s;
-    text-decoration: none;
-    color: #131701;
-    right: 143px;
-    bottom: 0;
-}
-/* effect an ADDbtn */
-.hover {
-    color: #255784;
-    background:  #666666d4;
-    box-shadow: 0 0 10px #1a1a05bd, 0 0 40px #1a1a05bd, 0 0 80px #1a1a05bd;
-    transition-delay: 1s;
-    border-radius: 20px;
-}
-  /*======== CART ToDoList */
-
-#cardToDoList{
-    width: 50%;
-    height:500px;
-    background-color: cadetblue;
-    margin: auto;
-   
-   
-}
-
-#items{
+.card {
+    position: relative;
     width: 100%;
-    height: 90vh;
-    
-    
+    height: 500px;
 }
 
+.card-body {
+    width: 100%;
+    position: absolute;
+    height: 95px;
+    margin: 0;
+}
 
+.card-txt {
+    position: relative;
+    height: 95px;
+    width: 100%;
 
-#items div{
-    display: block;
+}
+
+.store-item-name {
+    font-size: 42px;
+    font-family: serif;
+    position: absolute;
+}
+
+.store-item-price {
+    position: absolute;
+    right: 16px;
+    font-size: 26px;
+    bottom: 30px;
+}
+
+.store-item-btn {
+    position: absolute;
+    right: 43%;
+    font-size: 20px;
+    bottom: 24px;
+    text-decoration: overline;
+
+}
+
+/* =========finito=======card  ============*/
+/* start --   to-do-list */
+
+#cardToDoList {
+    width: 100%;
+    height: 800px;
+    background-color: darkgoldenrod;
+}
+
+#titleContainer {
+    width: 1200px;
+    height: 700px;
+    margin: auto;
+}
+
+.title {
     text-align: center;
-    font-size: 37px;
-    font-family: initial;    
+    font-size: 57px;
 }
 
-#items ul{
-    width: 100%;
-     text-align: center;
-    
+.titleItems{
+    height:600px ;
+}
+.titleItems .itemListe {
+    text-align: center;
+    position: relative;
+    height:100px ;
 }
 
-#items ul li{
-   
+.titleItems .itemListe li {
+    position: absolute;
+    padding: 10px 30px;
     display: inline-block;
-    margin-left: 70px;
-    height: 70px;
-    line-height: 70px;
-    /* display: inline-block; */
-    padding: 5px 15px;
-    border-bottom: 1px solid black;  
+    font-size: 37px;
 }
 
-#items ul :nth-child(1){
-  margin-right: 100px;
+.titleItems .itemListe li:nth-child(1){
+    left: 10%;
 }
-#items ul :nth-child(2){
-    margin-right: 100px;
-  }
-  
-  #items ul :nth-child(3){
-    margin-right: 100px;
-  }
-  
+.titleItems .itemListe li:nth-child(2){
+    left: 42%;
+}
+.titleItems .itemListe li:nth-child(3){
+    right: 6%;
+}
 
+
+/* toDoListStyle */
+
+ .toDoListStyle{
+  position: relative;
+    width: 1200px;
+    height: 100px;
+    list-style-type: none;
+}
+
+.toDoListStyle li{
+    display: inline-block;
+    padding: 10px 30px;
+    font-size: 30px;
+    position: absolute;    
+} 
+
+.img img{
+    border-radius: 6px;
+}
+.item-name{
+    left: 10%;
+}
+.item-price{
+    left: 43%;
+}
+.Quantity{
+    right: 14%;
+}
+.item-btn{
+    right:0;
+   
+}
+.item-btn button{
+    font-size: 23px;
+    box-shadow: 0px 5px 10px black;
+    border-radius: 6px;
+    outline: none;
+  
+}
 
 /*==============nav bar @media =============*/
 @media screen and (max-width: 660px) {
@@ -425,38 +394,51 @@ nav a:hover:after {
 
     #shopContainer {
         display: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+
+   #flex{
+    flex-wrap: wrap;
+    height: 1700px;
+   }
+
+   #store-items{
+    flex-wrap: wrap;
+   }
+
+    /*
 
     }
 
-    #flex {
-        width: 100%;
-        height: 1700px;
-        margin-left: 0;
-        text-align: center;
+    #container{
+    display: block;
+    margin: 0;
+}
+
+    #store-items {
+        width: 375px;
+        height: 3000px;
+        flex-direction: column;
+        margin: 0;
+
     }
 
-    #flex div {
-        width: 100%;
-        margin-left: 0;
+    #store-items .store-item{
+        margin: 0 0;
+        min-width: 375px;
 
     }
 
-    #cardContainer1 {
-        text-align: center;
-        width: 100%;
-        height: 1500px;
-        margin-left: 0;
-    }
-
-    #cardContainer1 div {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #cardContainer2 div {
-        width: 100%;
-        margin-left: 0;
-    }
+    #cardToDoList {
+        width: 375px;
+        display: block;
+        height: 700px;
+        margin: 0;
+    } */
 
 }
 
@@ -488,7 +470,7 @@ nav a:hover:after {
         display: none;
     }
 
-    #shopContainer {
+    /*     #shopContainer {
         display: none;
 
     }
@@ -505,21 +487,6 @@ nav a:hover:after {
         margin-left: 0;
 
     }
+ */
 
-    #cardContainer1 {
-        text-align: center;
-        width: 100%;
-        height: 1500px;
-        margin-left: 0;
-    }
-
-    #cardContainer1 div {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    #cardContainer2 div {
-        width: 100%;
-        margin-left: 0;
-    }
 }
