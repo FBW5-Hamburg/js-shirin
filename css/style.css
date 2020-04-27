@@ -318,13 +318,16 @@ nav a:hover:after {
 }
 
 .titleItems .itemListe li:nth-child(1){
-    left: 10%;
+    left: 5%;
 }
 .titleItems .itemListe li:nth-child(2){
-    left: 42%;
+    left: 28%;
 }
 .titleItems .itemListe li:nth-child(3){
-    right: 6%;
+    right: 26%;
+}
+.titleItems .itemListe li:nth-child(4){
+    right: 9%;
 }
 
 
@@ -346,20 +349,37 @@ nav a:hover:after {
 
 .img img{
     border-radius: 6px;
+    width:70px;
+     height:60px;
 }
 .item-name{
-    left: 10%;
+    left: 7%;
 }
 .item-price{
-    left: 43%;
+    left: 29%;
 }
 .Quantity{
-    right: 14%;
+    right: 34%;
 }
 .item-btn{
-    right:0;
+    right:15%;
    
 }
+/* ===total & count */
+.div{
+    position: absolute;
+   right: 10%;
+
+}
+.divTotal{
+    padding: 10px 30px;
+    font-size: 30px;
+}
+.countDiv{
+    padding: 10px 30px;
+    font-size: 25px;
+}
+
 .item-btn button{
     font-size: 23px;
     box-shadow: 0px 5px 10px black;
