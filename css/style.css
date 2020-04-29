@@ -19,17 +19,7 @@ body {
     margin: 0 auto;
 }
 
-/* .logo a {
-    display: block;
-    padding-top: 20px;
-    text-decoration: none;
-    font-size: 20px;
-    font-family: initial;
-    font-style: italic;
-    text-decoration: overline;
-    color: black;
 
-} */
 
 nav {
     overflow: hidden;
@@ -73,45 +63,76 @@ nav a:after {
 nav a:hover:after {
     width: 100%;
 }
+
 /* =================clock============= */
 
 
 
-.clock{
-    width: 300px;
-    height: 300px;
-    /* background-color: black; */
+.clock {
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    /* border:2px solid grey ; */
     position: relative;
     margin-left: 7%;
 }
 
-.clock .number{
---rotation : 0;
-position: absolute;
-color: grey;
-width: 100%;
-height: 100%;
-text-align: center;
-transform: rotate(var(--rotation));
-font-size: 1.5rem;
+.clock .number {
+    --rotation: 0;
+    position: absolute;
+    color: grey;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
 }
 
-.clock .number1{--rotation:30deg;}
-.clock .number2{--rotation:60deg;}
-.clock .number3{--rotation:90deg;}
-.clock .number4{--rotation:120deg;}
-.clock .number5{--rotation:150deg;}
-.clock .number6{--rotation:180deg;}
-.clock .number7{--rotation:210deg;}
-.clock .number8{--rotation:240deg;}
-.clock .number9{--rotation:270deg;}
-.clock .number10{--rotation:300deg;}
-.clock .number11{--rotation:330deg;}
+.clock .number1 {
+    --rotation: 30deg;
+}
 
-.clock .hand{
-    --rotation : 0;
+.clock .number2 {
+    --rotation: 60deg;
+}
+
+.clock .number3 {
+    --rotation: 90deg;
+}
+
+.clock .number4 {
+    --rotation: 120deg;
+}
+
+.clock .number5 {
+    --rotation: 150deg;
+}
+
+.clock .number6 {
+    --rotation: 180deg;
+}
+
+.clock .number7 {
+    --rotation: 210deg;
+}
+
+.clock .number8 {
+    --rotation: 240deg;
+}
+
+.clock .number9 {
+    --rotation: 270deg;
+}
+
+.clock .number10 {
+    --rotation: 300deg;
+}
+
+.clock .number11 {
+    --rotation: 330deg;
+}
+
+.clock .hand {
+    --rotation: 0;
     position: absolute;
     bottom: 50%;
     left: 50%;
@@ -125,7 +146,7 @@ font-size: 1.5rem;
     transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
 }
 
-.clock::after{
+.clock::after {
     content: '';
     position: absolute;
     background-color: gray;
@@ -134,7 +155,7 @@ font-size: 1.5rem;
     height: 15px;
     top: 50%;
     left: 50%;
-    transform: translate(-50% , -50%);
+    transform: translate(-50%, -50%);
     border-radius: 50%;
 }
 
@@ -209,7 +230,7 @@ font-size: 1.5rem;
 
 .flexContainer {
     width: 100%;
-    height: 650px;
+    /* height: 650px; --------------------------------------*/
 }
 
 #flex {
@@ -230,7 +251,7 @@ font-size: 1.5rem;
     /* box-shadow: 0 30px 30px -20px rgba(0, 0, 0, .5); */
     border-radius: 15px;
     margin-left: 20px;
-   position: relative;
+    position: relative;
 
 }
 
@@ -240,7 +261,8 @@ font-size: 1.5rem;
     width: 41%;
     height: 550px;
     position: relative;
-    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);;
+    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);
+    ;
 
 }
 
@@ -250,7 +272,8 @@ font-size: 1.5rem;
     background: url('../img/wand-4.jpg') center/cover no-repeat;
     width: 41%;
     height: 550px;
-    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);;
+    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);
+    ;
 }
 
 
@@ -260,13 +283,15 @@ font-size: 1.5rem;
     background: url('../img/wand-0.jpg') center/cover no-repeat;
     width: 41%;
     height: 550px;
-    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);;
+    box-shadow: 0 30px 30px -16px rgba(0, 0, 0, .5);
+    ;
 }
 
 
 .btn {
     display: inline-block;
-    color: #1798b8;
+    /* color: #1798b8; */
+    color: black;
     font-size: 3rem;
     padding: 1rem;
     border-radius: 20px;
@@ -286,10 +311,11 @@ font-size: 1.5rem;
 /* ========store==================================================================*/
 
 /* -------store -----------options*/
-.row{
+.row {
     width: 100%;
 }
-.row h2{
+
+.row h2 {
     font-family: fontShop;
     text-align: center;
     font-size: 60px;
@@ -297,18 +323,20 @@ font-size: 1.5rem;
     text-decoration: overline;
     box-shadow: 0px 10px 10px -2px black;
 }
-#options{
+
+#options {
     height: 70px;
     width: 100%;
     text-align: center;
 }
- #options li{
+
+#options li {
     display: inline-block;
     margin-left: 5%;
 
 }
 
-#options li a{
+#options li a {
     text-decoration: none;
     color: black;
     padding: 5px 15px;
@@ -316,38 +344,40 @@ font-size: 1.5rem;
 }
 
 
-.opiOver{
+.opiOver {
     box-shadow: 0 22px 37px -6px black;
     border-radius: 5px;
 }
+
 /*-------------store ------------ search ----------------- */
-#search{
+#search {
     text-align: center;
     width: 100%;
 
 }
-#searchInput{
+
+#searchInput {
     width: 20%;
     height: 40px;
     margin-bottom: 10px;
-    font-size: 30px;
-    border: 1px solid black ;
+    /* font-size: 30px; */
+    border: 1px solid black;
 }
 
+#searchInput input::placeholder {
+    font-size: 30px;
+}
 
 
 
 
 #store {
-    /* background-color: burlywood;  */
     width: 100%;
-    /* height: 1700px; */
 }
 
 .container {
-    /* width: 1200px; */
+
     width: 100%;
-    /* height: 1700px; */
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -362,20 +392,16 @@ font-size: 1.5rem;
 
 #store-items {
     display: flex;
-    /* width: 1200px; */
     width: 70%;
     margin: auto;
     justify-content: center;
-    /* height: 3000px; */
     flex-wrap: wrap;
 }
 
 #store-items .store-item-div {
 
     width: 30%;
-    /* height: 500px; */
-    /* background-color: cornsilk; */
-    margin-left: 30px;
+    /* margin-left: 30px; */
     margin-bottom: 50px;
 }
 
@@ -432,27 +458,27 @@ font-size: 1.5rem;
     /* color: black; */
 }
 
-.dishes{
+.dishes {
     color: #2e634a;
 }
 
-.sofa{
+.sofa {
     color: #d3912c;
 }
 
-.glass{
+.glass {
     color: #6b96c7;
 }
 
-.flowers{
+.flowers {
     color: #620202;
 }
 
-.jar{
+.jar {
     color: #f40f02;
 }
 
-.java{
+.java {
     color: #0d0d0d;
 }
 
@@ -460,8 +486,8 @@ font-size: 1.5rem;
 
 .hover {
     color: blanchedalmond;
-    background-color: burlywood;
-    box-shadow: 0 0 10px rgb(224, 157, 68), 0 0 40px rgb(224, 157, 68), 0 0 80px rgb(224, 157, 68);
+    background-color: gray;
+    box-shadow: 0 0 10px rgb(48, 46, 44), 0 0 40px rgb(56, 54, 52), 0 0 80px rgb(63, 61, 57);
     transition-delay: 1s;
 }
 
@@ -471,12 +497,13 @@ font-size: 1.5rem;
 #cardToDoList {
     width: 80%;
     height: 800px;
-  background-color: darkgoldenrod;
+    background-color: darkgoldenrod;
     position: relative;
     margin: auto;
     border-radius: 24px;
     margin-bottom: 5%;
-    box-shadow: 0 30px 30px -18px black;;
+    box-shadow: 0 30px 30px -18px black;
+    ;
 }
 
 #titleContainer {
@@ -487,8 +514,8 @@ font-size: 1.5rem;
     /* margin: auto; */
 }
 
-#titleContainer .title{
-    font-family:fontShop;
+#titleContainer .title {
+    font-family: fontShop;
     font-weight: bold;
     font-size: 40px;
     text-decoration: overline;
@@ -499,7 +526,7 @@ font-size: 1.5rem;
 
 .titleOurProduct {
     text-align: center;
-    font-family:fontShop;
+    font-family: fontShop;
     font-size: 43px;
     letter-spacing: -3px;
     text-decoration: overline;
@@ -579,15 +606,15 @@ font-size: 1.5rem;
 }
 
 .item-price {
-    left: 29%;
+    left: 19%;
 }
 
 .Quantity {
-    right: 37%;
+    right: 53%;
 }
 
 .item-btn {
-    right: 21%;
+    right: 28%;
 
 }
 
@@ -620,14 +647,134 @@ font-size: 1.5rem;
 
 }
 
+
+
+
+
+/*================= f0000000ter */
+
+/* ------------------------footer------------------------------------ */
+
+.footer {
+    display: flex;
+    justify-content: center;
+    height: 400px;
+    flex-wrap: wrap;
+    box-shadow: -11px -13px 30px black;
+}
+
+.footer>.fo {
+    width: 33.3%;
+    /* background-color: rgb(110, 104, 73); */
+}
+
+.foo1>h3 {
+    font-family: FontShop;
+    font-size: 40px;
+    /* border: 6px solid black; */
+    width: 17%;
+    height: 18%;
+    border-radius: 10px;
+    box-shadow: 0px 30px 30px -10px;
+}
+
+.footer>.fo>a {
+    text-decoration: none;
+}
+
+.footer>.foo1>a {
+    display: block;
+    color: #0d0d0d;
+    font-size: 10px;
+    padding: 10px;
+    font-size: 27px;
+
+}
+
+.footer>.foo2>a {
+    display: block;
+    color: #0d0d0d;
+    font-size: 27px;
+    margin-top: 37px;
+}
+
+.inputfooter {
+    height: auto;
+}
+
+.inputfooter>input {
+    display: block;
+    font-size: 30px;
+
+}
+
+input::placeholder {
+    font-size: 20px;
+}
+
+.inputfooter>label {
+  
+    font-size: 27px;
+    color: #0d0d0d;
+}
+
+#sms {
+
+    height: 40px;
+    width: 50%;
+   
+}
+
+#click {
+
+    margin-top: 5px;
+    width: 30%;
+    padding: 10px 30px;
+    font-size: 20px;
+}
+
+#first {
+    height: 40px;
+    width: 50%;
+ 
+}
+
+#last {
+    height: 40px;
+    width: 50%;
+   
+}
+
+.fa-facebook{
+    color: #3b5998;
+}
+.fa-twitter{
+    color: #00acee;
+}
+.fa-instagram{
+    color:#d32f2f ;
+}
+
+/* -------- input check ======= */
+
+.valid{
+    border: 2px solid green;
+}
+
+.invalid{
+    border: 2px solid red;
+}
+
 /*==============nav bar @media =============*/
 @media screen and (max-width: 660px) {
-    .card{
+    .card {
         height: auto;
     }
-    .store-img{
+
+    .store-img {
         height: auto;
     }
+
     header {
         text-align: center;
     }
@@ -654,46 +801,77 @@ font-size: 1.5rem;
         display: none;
     }
 
-    .title {
-        /* display: none; */
-    }
+
     /* -----------------row 2-----filter------------------ */
-    #options{
+    #options {
         height: 200px;
     }
-    #options li{
+
+    #options li {
         display: block;
         margin-left: 0;
 
     }
 
-    #options li a{
-    padding: 0;
+    #options li a {
+        padding: 0;
     }
+
     /* -----------------row 3--------search box------------ */
 
-
-    .flexContainer{
-        height: 1700px;
+    #searchInput {
+        width: 95%;
     }
 
     #flex {
         width: 100%;
         flex-wrap: wrap;
-        height: 1700px;
+
         margin: 0;
     }
-    #flex .div{
+
+    #flex .div {
         width: 100%;
         margin-left: 0;
         margin-right: 0;
         padding: 0;
     }
-/* ==================store======================= */
+
+    /* -------------foooter -------------------*/
+    .footer {
+        margin-top: 8%;
+    }
+
+    .footer .fo {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 59px;
+    }
+
+    .foo1>h3 {
+        width: 30%;
+    }
+
+    .footer>.foo1>a {
+        font-size: 20px;
+    }
+
+    #first {
+        width: 90%;
+    }
+
+    #last {
+        width: 90%;
+    }
+
+    #sms {
+        width: 90%;
+    }
+
+    /* ==================store======================= */
     #store {
         width: 100%;
         margin: 0;
-        /* height: 3500px; */
     }
 
     .container {
@@ -702,31 +880,22 @@ font-size: 1.5rem;
         padding: 0;
     }
 
-
-    #searchInput{
-        width: 100%;
-    }
-
-/*  ------------  begin last row     -----------   */
+    /*  ------------  begin last row     -----------   */
 
     #store-items {
         width: 100%;
-        /* height: 3500px; */
+
     }
 
-    #store-items .store-item-div{
+    #store-items .store-item-div {
         width: 100%;
+        margin-top: 75px;
 
-    }
-
-
-    .store-item-div{
-        border-bottom: 1px solid black;
     }
 
     /* item title */
     .itemListe {
-        /* position: relative; */
+
         height: 50px;
         top: 11%;
 
@@ -756,9 +925,10 @@ font-size: 1.5rem;
 
 
     #cardToDoList {
-        position: relative;
+        /* position: relative; */
         margin: 0;
         width: 100%;
+        margin-top: 20%;
     }
 
     .toDoListStyle {
@@ -779,6 +949,7 @@ font-size: 1.5rem;
     .toDoListStyle li:nth-child(2) {
         left: 11%;
     }
+
     .toDoListStyle li:nth-child(3) {
         left: 33%;
     }
@@ -796,24 +967,18 @@ font-size: 1.5rem;
 
 
     #titleContainer {
-        position: relative;
+        /* position: relative; */
         width: 100%;
         margin: 0;
         left: 0;
     }
 
     .title {
-        /* position: absolute; */
+
         width: 100%;
         height: 100px;
         font-size: 10px;
     }
-
-
-
-
-
-
 }
 
 
@@ -839,44 +1004,43 @@ font-size: 1.5rem;
         content: none;
     }
 
-    .title {
-        /* display: none; */
+    .clock {
+        margin-left: 0;
     }
 
-        /* -----------------row 2----------------------- */
-        #options{
-            height: 200px;
-        }
-        #options li{
-            display: block;
-            margin-left: 0;
+    /* -----------------row 2----------------------- */
+    #options {
+        height: 200px;
+    }
 
-        }
+    #options li {
+        display: block;
+        margin-left: 0;
 
-        #options li a{
+    }
+
+    #options li a {
         padding: 0;
-        }
-        /* -----------------row 3-------------------- */
-
-    .flexContainer{
-        /* position: relative; */
-        height: 1700px;
     }
+
+    /* -----------------row 3-------------------- */
+
+
 
     #flex {
-        /* position: absolute; */
+
         flex-wrap: wrap;
         height: 1700px;
         margin: 0;
     }
-    #flex .div{
+
+    #flex .div {
         margin-left: 0;
     }
 
     #store {
         width: 100%;
         margin: 0;
-        /* height: 3500px; */
     }
 
     #container {
@@ -891,32 +1055,23 @@ font-size: 1.5rem;
 
     /* item title */
     .itemListe {
-        /* position: absolute; */
+
         height: 50px;
         top: 11%;
 
     }
 
     .itemListe li:nth-child(1) {
-        font-size: 20px;
-        padding: 0;
-        font-weight: bold;
+        display: none;
     }
 
     .itemListe li:nth-child(2) {
-        font-size: 20px;
-        padding: 0;
-        font-weight: bold;
+        display: none;
     }
 
     .itemListe li:nth-child(3) {
-        font-size: 20px;
-        padding: 0;
-        font-weight: bold;
+        display: none;
     }
-
-
-
 
 
     .sctore-item-div {
@@ -925,9 +1080,10 @@ font-size: 1.5rem;
     }
 
     #cardToDoList {
-        position: relative;
+
         margin: 0;
         width: 100%;
+        margin-top: 20%;
     }
 
     .toDoListStyle {
@@ -942,26 +1098,12 @@ font-size: 1.5rem;
     .toDoListStyle li {
         padding: 0;
         font-size: 20px;
+        margin-right: -20%;
     }
-    .toDoListStyle li:nth-child(2) {
-        left: 11%;
-    }
-    .toDoListStyle li:nth-child(3) {
-        left: 33%;
-    }
-
-    .toDoListStyle li:nth-child(4) {
-        left: 62%;
-    }
-
-    .toDoListStyle li:nth-child(5) button {
-        font-size: 20px;
-    }
-
-
 
 
     /* to-do-list */
+
 
 
     #titleContainer {
@@ -972,13 +1114,42 @@ font-size: 1.5rem;
     }
 
     .title {
-        /* position: absolute; */
+
         width: 100%;
         height: 100px;
         font-size: 10px;
     }
 
+    /* -------------foooter -------------------*/
+    .footer {
+        margin-top: 8%;
+    }
 
+    .footer .fo {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 59px;
+    }
+
+    .foo1>h3 {
+        width: 30%;
+    }
+
+    .footer>.foo1>a {
+        font-size: 20px;
+    }
+
+    #first {
+        width: 90%;
+    }
+
+    #last {
+        width: 90%;
+    }
+
+    #sms {
+        width: 90%;
+    }
 
 
 

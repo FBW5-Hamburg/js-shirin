@@ -1,28 +1,27 @@
+setInterval(setClock, 1000)
 
-setInterval(setClock , 1000)
 
-
-const hourHand = document.querySelector('[data-hour-hand]') 
-const minuteHand = document.querySelector('[data-minute-hand]') 
-const secondHand = document.querySelector('[data-second-hand]') 
+const hourHand = document.querySelector('[data-hour-hand]')
+const minuteHand = document.querySelector('[data-minute-hand]')
+const secondHand = document.querySelector('[data-second-hand]')
 
 
 
 function setClock() {
     const currentDate = new Date();
-    const secondsRation = currentDate.getSeconds()/60
-    const minutesRation =(secondsRation + currentDate.getMinutes())/60
-    const hoursRation =(minutesRation + currentDate.getHours())/12
+    const secondsRation = currentDate.getSeconds() / 60
+    const minutesRation = (secondsRation + currentDate.getMinutes()) / 60
+    const hoursRation = (minutesRation + currentDate.getHours()) / 12
 
-    setRotation(secondHand , secondsRation)
-    setRotation(minuteHand , minutesRation)
-    setRotation(hourHand , hoursRation)
+    setRotation(secondHand, secondsRation)
+    setRotation(minuteHand, minutesRation)
+    setRotation(hourHand, hoursRation)
 
 
 }
 
-function setRotation(element , rotationRatio) {
-    element.style.setProperty('--rotation' , rotationRatio * 360)
+function setRotation(element, rotationRatio) {
+    element.style.setProperty('--rotation', rotationRatio * 360)
 }
 
 setClock()
@@ -283,21 +282,21 @@ aBtns.forEach(btn => {
 const addItemBtn = document.querySelectorAll('.store-item-btn')
 
 addItemBtn.forEach(btn => {
-    btn.addEventListener('click' , (e)=>{
+    btn.addEventListener('click', (e) => {
         e.preventDefault()
-      //  console.log(e.target);
+        //  console.log(e.target);
 
-     /*    if (e.target.parentElement.classList.contains('')) {
-            
-        } */
+        /*    if (e.target.parentElement.classList.contains('')) {
+               
+           } */
 
         //!get img
-        let fullImgSrc =  e.target.parentElement.parentElement.parentElement.previousElementSibling.children[0].src;
-        let pos = fullImgSrc.indexOf("img")+ 3 
+        let fullImgSrc = e.target.parentElement.parentElement.parentElement.previousElementSibling.children[0].src;
+        let pos = fullImgSrc.indexOf("img") + 3
         //console.log(pos);
         let partImgSrc = fullImgSrc.slice(pos)
         //console.log(partImgSrc);
-        
+
         const item = {};
         item.img = `img-card${partImgSrc}`
 
@@ -312,87 +311,91 @@ addItemBtn.forEach(btn => {
         item.price = price
         //*let finalprice = price.slice(1).trim()  
 
-       // console.log(item);
-        
+        // console.log(item);
+
         const cartItem = document.createElement('div')
         cartItem.classList.add('toDoListStyle')
 
-        cartItem.innerHTML = 
-        ` 
+        cartItem.innerHTML =
+            ` 
         <li class="img"><img src="${item.img}" alt="" width="70px" height="60px"></li>
         <li class="item-name">${item.name}</li>
         <li class="item-price">${item.price}</li>
         <li class="Quantity">2</li>      
        `
-       //  <li class="item-btn"><button>remove</button></li>
+        //  <li class="item-btn"><button>remove</button></li>
 
-       let li = document.createElement('li')
-       cartItem.append(li)
-       li.classList.add('item-btn')
-       let button = document.createElement('button')
-       button.innerText = 'Delete'
-       li.append(button)
+        let li = document.createElement('li')
+        cartItem.append(li)
+        li.classList.add('item-btn')
+        let button = document.createElement('button')
+        button.innerText = 'Delete'
+        li.append(button)
 
-
-      button.addEventListener('click' , ()=>{
-          
-            cartItem.remove()
-            showTotals(); 
-           
+   
+        
+        button.addEventListener('click', () => {
+        
+                 showTotals();
+                 cartItem.remove()
+               
             
-        }) 
+        })
 
-//!put inside grocery list
- const groceryList = document.querySelector('.titleItems')
- //const cartAdd =  document.querySelector('toDoListStyle')
-  const cartAdd = document.querySelector('.divTC')
+        //!put inside grocery list
+        const groceryList = document.querySelector('.titleItems')
+        //const cartAdd =  document.querySelector('toDoListStyle')
+        const cartAdd = document.querySelector('.divTC')
 
- groceryList.insertBefore(cartItem , cartAdd)
- alert('add')
-        showTotals();    
+        groceryList.insertBefore(cartItem, cartAdd)
+
+        showTotals();
     })
-    
+ 
+
 });
 
 
 //!show totals
 function showTotals() {
-   let storage = 0
+    let storage = 0
 
     const totalArr = []
-   
+
     const items = document.querySelectorAll('.item-price')
 
-  items.forEach(itm => {
-      let innervalue = itm.innerText.replace('$','')
+    items.forEach(itm => {
+        let innervalue = itm.innerText.replace('$', '')
         storage = parseFloat(innervalue)
-    totalArr.push(parseFloat(storage))
-    
-    }); 
-  console.log(totalArr);
-    const totalMony = totalArr.reduce(function(totalArr , storage){
-      
+        totalArr.push(parseFloat(storage))
+
+    });
+    //console.log(totalArr);
+    const totalMony = totalArr.reduce(function (totalArr, storage) {
+
         totalArr += storage
         return totalArr
 
 
-    },0)
+    }, 0)
     //make it int
     const finalyMony = totalMony.toFixed(2)
-    
+
     document.querySelector('.div').innerText = finalyMony
     document.querySelector('.total').innerText = finalyMony
     document.querySelector('.item-count').innerText = totalArr.length
-  
+
+
+ 
 }
 
 
 // ==============store Options ============
 
- let optionsBtn = document.querySelectorAll('#options li a')
+let optionsBtn = document.querySelectorAll('#options li a')
 
 optionsBtn.forEach(bt => {
-   
+
     bt.addEventListener('mouseover', () => {
 
         bt.classList.add('opiOver')
@@ -401,7 +404,7 @@ optionsBtn.forEach(bt => {
         bt.classList.remove('opiOver')
     })
 
-}); 
+});
 
 
 
@@ -413,11 +416,32 @@ let placeholder = input.getAttribute('placeholder')
 let counter1 = 0
 setInterval(() => {
     counter1++
-    let txt = placeholder.substr(0,counter1)
-    input.setAttribute('placeholder',txt)
-    if(counter1 == placeholder.length){
+    let txt = placeholder.substr(0, counter1)
+    input.setAttribute('placeholder', txt)
+    if (counter1 == placeholder.length) {
         counter1 = 0
     }
-    
+
 }, 200);
+
+
+//===================input check========
+let regex = new RegExp(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)
+
+let inputEmail = document.querySelector('#sms')
+let sendBtn = document.querySelector('#click')
+
+sendBtn.addEventListener('click', () => {
+    if (regex.test(inputEmail.value)) {
+        inputEmail.classList.add('valid')
+        inputEmail.classList.remove('invalid')
+    } else {
+        inputEmail.classList.remove('valid')
+        inputEmail.classList.add('invalid')
+    }
+})
+
+
+
+
 
