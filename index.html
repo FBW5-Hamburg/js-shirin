@@ -13,9 +13,9 @@
 
 <body>
   <div class="header">
-    <div class="logo">
+<!--     <div class="logo">
       <a href="/">LOGO </a>
-    </div>
+    </div> -->
     <nav>
       <ul>
         <li><a href="">home</a></li>
@@ -26,6 +26,27 @@
       </ul>
     </nav>
   </div>
+<!--======= clock======= -->
+   <div class="clock">
+    <div class="hand hour" data-hour-hand></div>
+    <div class="hand minute" data-minute-hand></div>
+    <div class="hand secend" data-second-hand></div>
+    <div class="number number1"></div>
+    <div class="number number2"></div>
+    <div class="number number3">3</div>
+    <div class="number number4"></div>
+    <div class="number number5"></div>
+    <div class="number number6">6</div>
+    <div class="number number7"></div>
+    <div class="number number8"></div>
+    <div class="number number9">9</div>
+    <div class="number number10"></div>
+    <div class="number number11"></div>
+    <div class="number number12">12</div>
+
+  </div>
+
+
 
   <!-- slider -->
   <div class="font">
@@ -43,7 +64,7 @@
   </div>
  -->
   <!-- images -->
-  <div class="title"><img src="./img/product.png" alt=""></div>
+  <div class="titleOurProduct"><h3><sup>OUr</sup>products</h3></div>
   <div class="flexContainer">
     <div id="flex">
 
@@ -74,11 +95,23 @@
     <div class="container">
 
       <!-- title -->
-      <div class="row"></div>
+      <div class="row">
+        <h2><sup>our</sup>Store</h2>
+      </div>
       <!-- filter -->
-      <div class="row"></div>
+      <div class="row">
+        <ul id="options">
+          <li><a href="#">All</a></li>
+          <li><a href="#">Sofas</a></li>
+          <li><a href="#">Dishes</a></li>
+          <li><a href="#">Glasses</a></li>
+          <li><a href="#">Parquet</a></li>
+        </ul>
+      </div>
       <!-- search box -->
-      <div class="row"></div>
+      <div class="row" id="search" >
+        <input type="text" placeholder= "Search Item..."  id="searchInput" >
+      </div>
       <!-- =======items(cards)============ -->
       <div class="row" id="store-items">
         <!-- item1 -->
@@ -89,11 +122,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name dishes">Dishes</span>
+                <span class="store-item-price dishes">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="dishes" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -107,11 +140,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name sofa">Sofa</span>
+                <span class="store-item-price sofa">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="sofa" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -125,11 +158,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name glass">Glass</span>
+                <span class="store-item-price glass">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="glass" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -143,11 +176,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name flowers">Flowers</span>
+                <span class="store-item-price flowers">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="flowers" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -161,11 +194,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name jar">Jar</span>
+                <span class="store-item-price jar">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="jar" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -179,11 +212,11 @@
             </div>
             <div class="card-body">
               <div class="card-txt">
-                <span class="store-item-name">item</span>
-                <span class="store-item-price">
+                <span class="store-item-name java">javaScript</span>
+                <span class="store-item-price java">
                   <p><sup>$</sup>1.99</p>
                 </span>
-                <span class="store-item-btn"><a href="#">Add Item</a></span>
+                <span class="store-item-btn"><a class="java" href="#">Add Item</a></span>
 
               </div>
             </div>
@@ -201,20 +234,20 @@
     <div id="titleContainer">
       <h1 class="title">Grocery list</h1>
       <div class="titleItems">
-        <div class="itemListe">
+        <ul class="itemListe">
           <li>ITEM</li>
           <li>PRICE</li>
           <li>QUANTITY</li>
-        </div>
-        <div class="toDoListStyle">
+        </ul>
+<!--         <ul class="toDoListStyle">
           <li class="img"><img src="./img-card/mobel-2.jpg" alt="" width="70px" height="60px"></li>
           <li class="item-name">sofa</li>
           <li class="item-price">$2.99</li>
           <li class="Quantity">2</li>
           <li class="item-btn"><button>remove</button></li>
-        </div>
+        </ul> -->
 
-        <div class="div">
+        <div class="divTC">
           <div class='divTotal'>TOTAL:
             <div class="total"></div>
           </div>
@@ -228,7 +261,10 @@
     </div>
   </div>
 
-  </div>
+
+
+
+
   <script src="./js/script.js"></script>
 </body>
 

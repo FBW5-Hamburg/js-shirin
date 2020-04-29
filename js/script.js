@@ -1,3 +1,33 @@
+
+setInterval(setClock , 1000)
+
+
+const hourHand = document.querySelector('[data-hour-hand]') 
+const minuteHand = document.querySelector('[data-minute-hand]') 
+const secondHand = document.querySelector('[data-second-hand]') 
+
+
+
+function setClock() {
+    const currentDate = new Date();
+    const secondsRation = currentDate.getSeconds()/60
+    const minutesRation =(secondsRation + currentDate.getMinutes())/60
+    const hoursRation =(minutesRation + currentDate.getHours())/12
+
+    setRotation(secondHand , secondsRation)
+    setRotation(minuteHand , minutesRation)
+    setRotation(hourHand , hoursRation)
+
+
+}
+
+function setRotation(element , rotationRatio) {
+    element.style.setProperty('--rotation' , rotationRatio * 360)
+}
+
+setClock()
+
+
 //=======slider
 let slider = document.querySelector('.slider')
 let bg = document.querySelector('.bg')
@@ -230,9 +260,9 @@ function prevSlide3() {
 }
 
 
+// hover ------- store-item-btn
 
-//=======effect an ADDbtn===========
-/* let aBtns = document.querySelectorAll('#cardContainer1 a')
+let aBtns = document.querySelectorAll('.store-item-btn a')
 
 aBtns.forEach(btn => {
     btn.addEventListener('mouseover', () => {
@@ -244,18 +274,7 @@ aBtns.forEach(btn => {
 
 });
 
-let aBtn2 = document.querySelectorAll('#cardContainer2 a')
 
-aBtn2.forEach(btn => {
-    btn.addEventListener('mouseover', () => {
-        btn.classList.add('hover')
-    })
-    btn.addEventListener('mouseout', () => {
-        btn.classList.remove('hover')
-    })
-
-});
- */
 
 //=================ToDoList 
 
@@ -315,13 +334,18 @@ addItemBtn.forEach(btn => {
        li.append(button)
 
 
-        button.addEventListener('click' , ()=>{
+      button.addEventListener('click' , ()=>{
+          
             cartItem.remove()
-        })
+            showTotals(); 
+           
+            
+        }) 
 
 //!put inside grocery list
  const groceryList = document.querySelector('.titleItems')
- const cartAdd =  document.querySelector('toDoListStyle')
+ //const cartAdd =  document.querySelector('toDoListStyle')
+  const cartAdd = document.querySelector('.divTC')
 
  groceryList.insertBefore(cartItem , cartAdd)
  alert('add')
@@ -331,17 +355,12 @@ addItemBtn.forEach(btn => {
 });
 
 
-
-
-
-
-
-
-
 //!show totals
 function showTotals() {
    let storage = 0
+
     const totalArr = []
+   
     const items = document.querySelectorAll('.item-price')
 
   items.forEach(itm => {
@@ -352,9 +371,11 @@ function showTotals() {
     }); 
   console.log(totalArr);
     const totalMony = totalArr.reduce(function(totalArr , storage){
-
+      
         totalArr += storage
         return totalArr
+
+
     },0)
     //make it int
     const finalyMony = totalMony.toFixed(2)
@@ -364,4 +385,39 @@ function showTotals() {
     document.querySelector('.item-count').innerText = totalArr.length
   
 }
+
+
+// ==============store Options ============
+
+ let optionsBtn = document.querySelectorAll('#options li a')
+
+optionsBtn.forEach(bt => {
+   
+    bt.addEventListener('mouseover', () => {
+
+        bt.classList.add('opiOver')
+    })
+    bt.addEventListener('mouseout', () => {
+        bt.classList.remove('opiOver')
+    })
+
+}); 
+
+
+
+//================search Item... =======
+
+let input = document.querySelector('#searchInput')
+
+let placeholder = input.getAttribute('placeholder')
+let counter1 = 0
+setInterval(() => {
+    counter1++
+    let txt = placeholder.substr(0,counter1)
+    input.setAttribute('placeholder',txt)
+    if(counter1 == placeholder.length){
+        counter1 = 0
+    }
+    
+}, 200);
 
