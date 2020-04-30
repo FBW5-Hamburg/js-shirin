@@ -12,7 +12,7 @@ secend step : animation and content
 
  { animate -
 
- transform }
+ transform - btns}
 
 
 third step : macke content 
@@ -24,6 +24,6 @@ grocery list }
 
 forth step : macke footer {
 
-footer - abaout us-
+footer - about us-
 
 form anmelden }
