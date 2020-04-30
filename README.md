@@ -4,7 +4,8 @@ first step : make a Header
 
  {clock - 
 
-navbar ...}
+navbar  {
+- link ...}
 
 
 secend step : animation and content
