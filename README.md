@@ -24,6 +24,6 @@ grocery list }
 
 forth step : macke footer {
 
-footer - 
+footer - abaout us-
 
-form }
+form anmelden }
