@@ -1,3 +1,5 @@
+//===============clock==============
+
 setInterval(setClock, 1000)
 
 
@@ -332,14 +334,14 @@ addItemBtn.forEach(btn => {
         button.innerText = 'Delete'
         li.append(button)
 
-   
-        
+
+
         button.addEventListener('click', () => {
-        
-                 showTotals();
-                 cartItem.remove()
-               
-            
+
+            showTotals();
+            cartItem.remove()
+
+
         })
 
         //!put inside grocery list
@@ -351,7 +353,7 @@ addItemBtn.forEach(btn => {
 
         showTotals();
     })
- 
+
 
 });
 
@@ -386,7 +388,7 @@ function showTotals() {
     document.querySelector('.item-count').innerText = totalArr.length
 
 
- 
+
 }
 
 
@@ -445,3 +447,11 @@ sendBtn.addEventListener('click', () => {
 
 
 
+let listGrocery = document.querySelector('#listGrocery')
+let cardToDoListDiv = document.querySelector('#cardToDoList')
+
+
+listGrocery.addEventListener('click' , (e)=>{
+    e.preventDefault()
+    cardToDoListDiv.style.display = 'block'
+})
